@@ -16,32 +16,23 @@ using System.Windows.Shapes;
 using Курсовая.Controllers;
 using Курсовая.Models;
 
-
 namespace Курсовая.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ProductListView.xaml
+    /// Логика взаимодействия для ProductListView2.xaml
     /// </summary>
-    public partial class ProductListView : Window, INotifyPropertyChanged
+    public partial class ProductListView2 : Window
     {
+        
         private List<Product> products;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        void Signal([CallerMemberName] string prop = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-        public List<Product> Products { 
-            get => products;
-            set
-            {
-                products = value;
-                Signal();
-            }
-        }
-        public ProductListView()
+        
+       
+        public ProductListView2()
         {
             InitializeComponent();
-            Task.Run(async () => await UpdateGrid());
-            DataContext = this;
+
+            
         }
 
         private async void MainGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -63,7 +54,8 @@ namespace Курсовая.Windows
         {
             //IEnumerable<Product> productList = await MyHTTPClient.GetAllProducts();
             IEnumerable<Product> productList = await MyHTTPClient.GetAllProducts();
-            Products = new List<Product>(productList);
+            MainGrid.ItemsSource = productList;
+
         }
 
         private void button_add_Click(object sender, RoutedEventArgs e)
@@ -78,9 +70,28 @@ namespace Курсовая.Windows
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
+        private async void Window_Initialized(object sender, EventArgs e)
+        {
+            await UpdateGrid();
+        }
+
+        private async void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainGrid.SelectedItem != null)
+            {
+                Product product = (Product)MainGrid.SelectedItem;
+                System.Net.HttpStatusCode code = await MyHTTPClient.DeleteProduct(product);
+                if(code == System.Net.HttpStatusCode.NotFound)
+                {
+                    MessageBox.Show("Продукт не найден", "Не удалось удалить продукт");
+                }
+                else if(code == System.Net.HttpStatusCode.InternalServerError)
+                {
+                    MessageBox.Show("Есть связи с другими записями", "Не удалось удалить продукт");
+                }
+                await UpdateGrid();
+            }
         }
     }
 }

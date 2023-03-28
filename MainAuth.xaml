@@ -1,0 +1,56 @@
+﻿<Window x:Class="Курсовая.MainAuth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсовая"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800"  Icon="/logo.png">
+    <Grid Background="#FF9441DF">
+        <Border Margin="278,39,271,38" CornerRadius="15,15,15,15" BorderThickness="2,2,2,2" Background="White" >
+            <Border.Effect>
+                <DropShadowEffect Color="#FFAD94C5" ShadowDepth="10" Direction="500" RenderingBias="Quality"/>
+            </Border.Effect>
+            <Border ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <Border.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterX="4" CenterY="1"/>
+                        <SkewTransform CenterX="4" CenterY="1"/>
+                        <RotateTransform Angle="0" CenterX="4" CenterY="1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.LayoutTransform>
+                <Border.Style>
+                    <Style/>
+                </Border.Style>
+                <Grid>
+                    <Image Source="/logo.png" Stretch="Fill" HorizontalAlignment="Center" Width="86" Height="80" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.504" Margin="0,10,0,0"/>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="120"/>
+                    <Label Content="LOG  IN" FontFamily="Felix Titling" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="86" Height="39" FontSize="18" Background="{x:Null}" Foreground="#FF7C0C9D" FontWeight="Bold"/>
+
+                </Grid>
+            </Border>
+
+        </Border>
+        <TextBox HorizontalAlignment="Left" Margin="330,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
+            <TextBox.Effect>
+                <DropShadowEffect Color="#FFC1AFD2" Direction="600"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Border HorizontalAlignment="Left" Margin="349,188,0,0" VerticalAlignment="Top" Width="127" Height="39" >
+            <Label Content="password" FontFamily="Felix Titling" FontSize="18" Background="{x:Null}" Foreground="#FF7C0C9D" FontWeight="Bold" OpacityMask="#FFD082FF"/>
+        </Border>
+        <TextBox HorizontalAlignment="Left" Margin="330,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
+            <TextBox.Effect>
+                <DropShadowEffect Color="#FFC1AFD2" Direction="600"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Border HorizontalAlignment="Left" Margin="358,261,0,0" VerticalAlignment="Top" Height="30" Width="92" CornerRadius="15,15,15,15" BorderThickness="2,2,2,2" BorderBrush="White" >
+            <Button Content="ENTER" BorderBrush="White" Foreground="#FF4C1883" Background="#FFA778EB" FontFamily="Felix Titling" Height="28" VerticalAlignment="Center" HorizontalAlignment="Left" Width="88"/>
+
+
+        </Border>
+
+
+    </Grid>
+</Window>

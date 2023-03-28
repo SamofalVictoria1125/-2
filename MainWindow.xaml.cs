@@ -34,7 +34,7 @@ namespace Курсовая
 
         private void buttonProduct_Click(object sender, RoutedEventArgs e)
         {
-            ProductListView productListView = new ProductListView();
+            ProductListView2 productListView = new ProductListView2();
             productListView.ShowDialog();
         }
     }
