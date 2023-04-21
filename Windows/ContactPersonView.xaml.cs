@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Курсовая.Controllers;
 using Курсовая.Models;
 
 namespace Курсовая.Windows
@@ -29,17 +30,41 @@ namespace Курсовая.Windows
             
             InitializeComponent();
             this.model = model;
-            /*textBoxID.Text = this.model.ID.ToString();
-            textBoxProductName.Text = this.model.ProductName;
-            textBoxCategory.Text = this.model.Category;
-            textBoxDescription.Text = this.model.Description;
+            textBoxID.Text = this.model.Id.ToString();
+            textBoxFirstName.Text = this.model.FirstName;
+            textBoxLastName.Text = this.model.LastName;
+            textBoxPatronymic.Text = this.model.Patronymic;
+            textBoxSex.Text = this.model.Sex;
             OpenMode = openMode;
             if (openMode == 0)
             {
                 textBoxID.Visibility = Visibility.Hidden;
                 label_ID.Visibility = Visibility.Hidden;
-            }*/
+            }
 
+        }
+
+        private async void buttonSave_Click(object sender, RoutedEventArgs e)
+        {
+            model.FirstName = textBoxFirstName.Text;
+            model.LastName = textBoxLastName.Text;
+            model.Patronymic = textBoxPatronymic.Text;
+            model.Sex = textBoxSex.Text;
+            if (OpenMode == 0)
+            {
+                await MyHTTPClient.CreateContactPerson(model);
+
+            }
+            else
+            {
+                await MyHTTPClient.UpdateContactPerson(model);
+            }
+            DialogResult = true;
+        }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:Курсовая.Windows"
         mc:Ignorable="d"
         Title="ContactPersonView" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF9441DF">
+        <Rectangle HorizontalAlignment="Left" Height="395" Margin="29,29,0,0" VerticalAlignment="Top" Width="305" Fill="#FF784BA3"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="277" Margin="148,29,0,0" VerticalAlignment="Top" Width="471" Fill="White"/>
+
+        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Margin="192,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" IsEnabled="False" Height="22"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Margin="162,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="425" Height="20"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Margin="162,146,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="425" Height="23"/>
+        <TextBox x:Name="textBoxPatronymic" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Margin="162,200,0,0"  VerticalAlignment="Top" Width="425" Height="22" RenderTransformOrigin="0.453,0.564"/>
+        <Label x:Name="label_ID" Content="ID" HorizontalAlignment="Left" Margin="162,44,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.451,-0.17" Foreground="#FF784BA3"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="358,69,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Light" Foreground="#FF784BA3"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="339,115,0,0" VerticalAlignment="Top" Height="31" Width="85" FontFamily="Segoe UI Light" FontSize="16" Foreground="#FF784BA3"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="339,169,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Light" Foreground="#FF784BA3"/>
+        <Button x:Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="332,311,0,0" VerticalAlignment="Top" Height="48" Width="93" Click="buttonSave_Click" Background="#FFD6A9FF" FontFamily="Segoe UI Light" Foreground="White" BorderBrush="White"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="335,376,0,0" VerticalAlignment="Top" Height="48" Width="89" Click="buttonCancel_Click" Background="#FFD6A9FF" FontFamily="Segoe UI Light" Foreground="White" BorderBrush="White"/>
+        <Label Content="Пол" HorizontalAlignment="Left" Margin="360,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.576" FontSize="16" FontFamily="Segoe UI Light" Foreground="#FF784BA3"/>
+        <TextBox x:Name="textBoxSex" TextWrapping="Wrap" AcceptsReturn="True" HorizontalAlignment="Left" Margin="162,253,0,0"  VerticalAlignment="Top" Width="425" Height="21" RenderTransformOrigin="0.453,0.564"/>
+
     </Grid>
 </Window>

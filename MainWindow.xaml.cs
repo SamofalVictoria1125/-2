@@ -37,5 +37,32 @@ namespace Курсовая
             ProductListView2 productListView = new ProductListView2();
             productListView.ShowDialog();
         }
+
+        private void Button_Counterparty(object sender, RoutedEventArgs e)
+        {
+            CounterpartyListView counterpartylistView = new CounterpartyListView();
+            counterpartylistView.ShowDialog();
+        }
+
+        private void buttonCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerListView customerListView = new CustomerListView();
+            customerListView.ShowDialog();
+        }
+
+        private void Button_DeliveryCompositions(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonEmployee_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Purchase(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

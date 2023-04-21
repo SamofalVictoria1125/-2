@@ -6,51 +6,16 @@
         xmlns:local="clr-namespace:Курсовая"
         mc:Ignorable="d"
         Title="Авторизация" Height="450" Width="800"  Icon="/logo.png">
-    <Grid Background="#FF9441DF">
-        <Border Margin="278,39,271,38" CornerRadius="15,15,15,15" BorderThickness="2,2,2,2" Background="White" >
-            <Border.Effect>
-                <DropShadowEffect Color="#FFAD94C5" ShadowDepth="10" Direction="500" RenderingBias="Quality"/>
-            </Border.Effect>
-            <Border ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                <Border.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform CenterX="4" CenterY="1"/>
-                        <SkewTransform CenterX="4" CenterY="1"/>
-                        <RotateTransform Angle="0" CenterX="4" CenterY="1"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Border.LayoutTransform>
-                <Border.Style>
-                    <Style/>
-                </Border.Style>
-                <Grid>
-                    <Image Source="/logo.png" Stretch="Fill" HorizontalAlignment="Center" Width="86" Height="80" VerticalAlignment="Top" RenderTransformOrigin="0.469,0.504" Margin="0,10,0,0"/>
-                    <TextBlock HorizontalAlignment="Center" Margin="0,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="120"/>
-                    <Label Content="LOG  IN" FontFamily="Felix Titling" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="86" Height="39" FontSize="18" Background="{x:Null}" Foreground="#FF7C0C9D" FontWeight="Bold"/>
+    <Grid>
+        <Grid>
 
-                </Grid>
-            </Border>
+            <Button Click="Log" Content="Войти" HorizontalAlignment="Left" Margin="86,313,0,0" VerticalAlignment="Top" Width="242" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White"/>
+            <TextBox Name="txt_Login" HorizontalAlignment="Left" Margin="122,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="18,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="18,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+            <TextBox Name="txt_Password"  HorizontalAlignment="Left" Margin="121,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
+            <Button Click="Reg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="86,364,0,0" VerticalAlignment="Top" Width="242" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White"/>
 
-        </Border>
-        <TextBox HorizontalAlignment="Left" Margin="330,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
-            <TextBox.Effect>
-                <DropShadowEffect Color="#FFC1AFD2" Direction="600"/>
-            </TextBox.Effect>
-        </TextBox>
-        <Border HorizontalAlignment="Left" Margin="349,188,0,0" VerticalAlignment="Top" Width="127" Height="39" >
-            <Label Content="password" FontFamily="Felix Titling" FontSize="18" Background="{x:Null}" Foreground="#FF7C0C9D" FontWeight="Bold" OpacityMask="#FFD082FF"/>
-        </Border>
-        <TextBox HorizontalAlignment="Left" Margin="330,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
-            <TextBox.Effect>
-                <DropShadowEffect Color="#FFC1AFD2" Direction="600"/>
-            </TextBox.Effect>
-        </TextBox>
-        <Border HorizontalAlignment="Left" Margin="358,261,0,0" VerticalAlignment="Top" Height="30" Width="92" CornerRadius="15,15,15,15" BorderThickness="2,2,2,2" BorderBrush="White" >
-            <Button Content="ENTER" BorderBrush="White" Foreground="#FF4C1883" Background="#FFA778EB" FontFamily="Felix Titling" Height="28" VerticalAlignment="Center" HorizontalAlignment="Left" Width="88"/>
-
-
-        </Border>
-
-
+        </Grid>
     </Grid>
 </Window>

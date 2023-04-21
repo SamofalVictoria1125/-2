@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Курсовая.Controllers;
 using Курсовая.Models;
 
 namespace Курсовая.Windows
@@ -41,10 +42,10 @@ namespace Курсовая.Windows
         }
 
 
-        public void UpdateGrid()
+        public async Task UpdateGrid()
         {
-            /*List<ContactPerson> contactPersonList = DBModel.SelectAllProducts();
-            MainGrid.ItemsSource = contactPersonList;*/
+            IEnumerable<ContactPerson> contactPersonList = await MyHTTPClient.GetAllContactPersons();
+            MainGrid.ItemsSource = contactPersonList;
         }
 
         private void button_add_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,24 @@ namespace Курсовая.Windows
                 UpdateGrid();
             }
 
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainGrid.SelectedItem != null)
+            {
+                ContactPerson contactPerson = (ContactPerson)MainGrid.SelectedItem;
+                System.Net.HttpStatusCode code = await MyHTTPClient.DeleteContactPerson(contactPerson);
+                if (code == System.Net.HttpStatusCode.NotFound)
+                {
+                    MessageBox.Show("Контактное лицо не найдено", "Не удалось удалить контактное лицо");
+                }
+                else if (code == System.Net.HttpStatusCode.Conflict)
+                {
+                    MessageBox.Show("Есть связи с другими записями", "Не удалось удалить контактное лицо");
+                }
+                await UpdateGrid();
+            }
         }
     }
 }

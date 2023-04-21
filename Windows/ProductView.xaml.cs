@@ -31,8 +31,7 @@ namespace Курсовая.Windows
         /// <param name="openMode">если 0 - добавление, если 1 - редактирование</param>
         public ProductView(Product model, int openMode)
         {
-            int a;
-            a = 12;
+            
             InitializeComponent();
             this.model = model;
             textBoxID.Text = this.model.Id.ToString();
@@ -63,7 +62,7 @@ namespace Курсовая.Windows
                 await MyHTTPClient.UpdateProduct(model);
             }
             DialogResult = true;
-            /*Close();*/
+           
 
         }
 

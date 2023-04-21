@@ -7,8 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="buttonContactPerson" Content="Контактные лица" HorizontalAlignment="Left" Margin="47,52,0,0" VerticalAlignment="Top" Height="38" Width="187" Click="Button_Click"/>
-        <Button x:Name="buttonProduct" Content="Продукты" HorizontalAlignment="Left" Margin="47,133,0,0" VerticalAlignment="Top" Height="38" Width="187" Click="buttonProduct_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/1644752561_46-krot-info-p-fioletovie-foni-47.jpg"/>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="103" Margin="105,0,0,0" VerticalAlignment="Top" Width="695" Fill="White"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="160" Fill="#FFC79FF3"/>
+
+        <Button x:Name="buttonContactPerson" Foreground="DarkViolet" Content="Контактные лица" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
+        <Button x:Name="buttonProduct" Content="Продукты" HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonProduct_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
+        <Image Margin="0,0,670,336" Source="/лого.png" Stretch="Fill" HorizontalAlignment="Right" Width="100" Height="98" VerticalAlignment="Bottom"/>
+        <Button x:Name="buttonCounterparty" Foreground="DarkViolet" Content="Контрагенты" HorizontalAlignment="Left" Margin="0,154,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_Counterparty" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
+        <Button x:Name="buttonCustomer" Content="Заказчики" HorizontalAlignment="Left" Margin="0,181,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonCustomer_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
+        <Button x:Name="buttonDeliveryC" Foreground="DarkViolet" Content="Состав отгрузок" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_DeliveryCompositions" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
+        <Button x:Name="buttonEmployee" Content="Сотрудники" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonEmployee_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
+        <Button x:Name="buttonPurchase" Foreground="DarkViolet" Content="Покупки" HorizontalAlignment="Left" Margin="0,256,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_Purchase" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
 
     </Grid>
 </Window>

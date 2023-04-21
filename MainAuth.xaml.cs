@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Курсовая.Models;
+using Курсовая.Tools;
 
 namespace Курсовая
 {
@@ -23,7 +25,45 @@ namespace Курсовая
         {
             InitializeComponent();
         }
+        private async void Log(object sender, RoutedEventArgs e)
+        {
+            string login = txt_Login.Text;
+            string password = txt_Password.Text;
+            var json = await Api.Post("Users", new User { Login = login, Password = password }, "Auth");
+            var user = Api.Deserialize<User>(json);
+            bool isLogin = false, isEditUser = false;
+            {
+                if (user.Id == 0)
+                {
 
-       
+                    MessageBox.Show("Такого пользователя не существует!!", $"ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+                else
+                {
+                    isLogin = true;
+                }
+                if (isLogin)
+                {
+                    if (isEditUser)
+
+                        MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MainWindow main = new MainWindow();
+                    Close();
+                    main.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка!", $"Неверный логин или пароль!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+        }
+        private void Reg(object sender, RoutedEventArgs e)
+        {
+            MainRegistr m = new MainRegistr();
+            m.Show();
+            this.Close();
+
+        }
     }
 }
+

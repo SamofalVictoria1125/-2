@@ -52,7 +52,7 @@ namespace Курсовая.Windows
 
         public async Task UpdateGrid()
         {
-            //IEnumerable<Product> productList = await MyHTTPClient.GetAllProducts();
+           
             IEnumerable<Product> productList = await MyHTTPClient.GetAllProducts();
             MainGrid.ItemsSource = productList;
 
@@ -86,7 +86,7 @@ namespace Курсовая.Windows
                 {
                     MessageBox.Show("Продукт не найден", "Не удалось удалить продукт");
                 }
-                else if(code == System.Net.HttpStatusCode.InternalServerError)
+                else if(code == System.Net.HttpStatusCode.Conflict)
                 {
                     MessageBox.Show("Есть связи с другими записями", "Не удалось удалить продукт");
                 }

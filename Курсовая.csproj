@@ -8,17 +8,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1595710463_12-p-sine-fioletovie-foni-13.jpg" />
+    <None Remove="1612161161_192-p-fon-fioletovie-volni-248.jpg" />
+    <None Remove="1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
+    <None Remove="1644752561_46-krot-info-p-fioletovie-foni-47.jpg" />
     <None Remove="logo.png" />
+    <None Remove="maxresdefault %281%29.jpg" />
+    <None Remove="Windows\1595710463_12-p-sine-fioletovie-foni-13.jpg" />
+    <None Remove="Windows\1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
+    <None Remove="лого.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.15" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="лого.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1595710463_12-p-sine-fioletovie-foni-13.jpg" />
+    <Resource Include="1612161161_192-p-fon-fioletovie-volni-248.jpg" />
+    <Resource Include="1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
+    <Resource Include="1644752561_46-krot-info-p-fioletovie-foni-47.jpg" />
+    <Resource Include="maxresdefault (1).jpg" />
+    <Resource Include="Windows\1595710463_12-p-sine-fioletovie-foni-13.jpg" />
+    <Resource Include="Windows\1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
   </ItemGroup>
 
 </Project>
