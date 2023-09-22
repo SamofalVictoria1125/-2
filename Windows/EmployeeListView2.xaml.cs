@@ -11,16 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Курсовая.Controllers;
-using Курсовая.Models;
 
 namespace Курсовая.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для EmployeeListView.xaml
+    /// Логика взаимодействия для EmployeeListView2.xaml
     /// </summary>
-    public partial class EmployeeListView : Window
+    public partial class EmployeeListView2 : Window
     {
+        public EmployeeListView2()
+        {
+            InitializeComponent();
+        }
+
         private void button_add_Click(object sender, RoutedEventArgs e)
         {
 
@@ -30,6 +33,5 @@ namespace Курсовая.Windows
         {
 
         }
-
     }
 }

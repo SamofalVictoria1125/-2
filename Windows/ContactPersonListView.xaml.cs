@@ -21,11 +21,22 @@ namespace Курсовая.Windows
     /// </summary>
     public partial class ContactPersonListView : Window
     {
-        public ContactPersonListView()
+        public IEnumerable<ContactPerson> contactPersonList;
+
+        public ContactPersonListView(string openMode)
         {
             InitializeComponent();
             UpdateGrid();
+            if (openMode == "Выбор")
+            {
+                buttonSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                buttonSelect.Visibility = Visibility.Collapsed;
+            }
         }
+
 
         private void MainGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -41,10 +52,9 @@ namespace Курсовая.Windows
 
         }
 
-
         public async Task UpdateGrid()
         {
-            IEnumerable<ContactPerson> contactPersonList = await MyHTTPClient.GetAllContactPersons();
+            contactPersonList = await MyHTTPClient.GetAllContactPersons();
             MainGrid.ItemsSource = contactPersonList;
         }
 
@@ -76,6 +86,12 @@ namespace Курсовая.Windows
                 }
                 await UpdateGrid();
             }
+        }
+
+        private void buttonSelect_Click(object sender, RoutedEventArgs e)
+        {
+
+            DialogResult = true;
         }
     }
 }

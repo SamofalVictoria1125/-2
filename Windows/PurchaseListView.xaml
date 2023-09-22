@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Курсовая.Windows"
         mc:Ignorable="d"
-        Title="PurchaseListView" Height="450" Width="800">
+        Title="PurchaseListView" Height="450" Width="800" Initialized="Window_Initialized">
     <Grid>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False"  x:Name="MainGrid" MouseDoubleClick="MainGrid_MouseDoubleClick" Background="White" BorderBrush="#FF8C6C8F" Margin="0,68,0,150" HorizontalAlignment="Center" Width="500">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Порядковй номер"  
+                    Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Дата" 
+                    Binding="{Binding DateCalculation}"/>
+                <DataGridTextColumn Header="Менеджер" 
+                    Binding="{Binding Idmanager}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button_add" Content="Добавить" Click="button_add_Click" FontFamily="Felix Titling" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="72" Margin="682,127,0,258"/>
         
+        <Button x:Name="buttonDelete" Content="Удалить" HorizontalAlignment="Left" Margin="682,212,0,0" VerticalAlignment="Top" Height="49" Width="72" RenderTransformOrigin="0.689,1.666" Click="buttonDelete_Click"/>
+
     </Grid>
 </Window>

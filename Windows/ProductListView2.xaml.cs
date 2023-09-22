@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Курсовая.Controllers;
 using Курсовая.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Курсовая.Windows
 {
@@ -31,15 +34,14 @@ namespace Курсовая.Windows
         public ProductListView2()
         {
             InitializeComponent();
-
-            
+  
         }
 
         private async void MainGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (MainGrid.SelectedItem != null)
             {
-                Product product = (Product)MainGrid.SelectedItem;
+                Product product = (Product)MainGrid.SelectedItem;//конвертация выбранной строки в тип продукт
                 ProductView productView = new ProductView(product, 1);
                 if (productView.ShowDialog() == true)
                 {
@@ -60,14 +62,15 @@ namespace Курсовая.Windows
 
         private void button_add_Click(object sender, RoutedEventArgs e)
         {
-            Product product;
-            product = new Product();
-            ProductView productView = new ProductView(product, 0);//создание формы
-            if (productView.ShowDialog() == true)//запуск формы на показ
-            {
-                UpdateGrid();
-            }
-
+     
+                Product product;
+                product = new Product();
+                ProductView productView = new ProductView(product, 0);//создание формы
+                if (productView.ShowDialog() == true)//запуск формы на показ
+                {
+                    UpdateGrid();
+                }
+  
         }
 
 
@@ -93,5 +96,6 @@ namespace Курсовая.Windows
                 await UpdateGrid();
             }
         }
+
     }
 }

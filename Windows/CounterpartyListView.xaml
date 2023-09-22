@@ -20,8 +20,8 @@
                         Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="Наименование организации" 
                         Binding="{Binding NameOrganization}"/>
-                    <DataGridTextColumn Header="Ответственное лицо" 
-                        Binding="{Binding IdContactPerson}"/>
+                    <DataGridTextColumn Header="Контактное лицо" 
+                        Binding="{Binding Path=ContactPerson.FirstName, IsAsync=True, UpdateSourceTrigger=PropertyChanged}"/>
                     <DataGridTextColumn Header="Адрес" 
                         Binding="{Binding Address}"/>
                 </DataGrid.Columns>
@@ -31,5 +31,6 @@
             <Button x:Name="button_add" Content="Добавить" Click="button_add_Click" FontFamily="Felix Titling" BorderBrush="{x:Null}" Height="47" VerticalAlignment="Top"/>
         </Border>
         <Button x:Name="buttonDelete" Content="Удалить" HorizontalAlignment="Left" Margin="682,212,0,0" VerticalAlignment="Top" Height="49" Width="72" RenderTransformOrigin="0.689,1.666" Click="buttonDelete_Click"/>
+        <Button x:Name="ButtonSelect" Content="Button" HorizontalAlignment="Left" Margin="682,287,0,0" VerticalAlignment="Top" Height="36" Width="76" Click="ButtonSelect_Click"/>
     </Grid>
 </Window>

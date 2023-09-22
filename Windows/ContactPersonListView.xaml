@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Курсовая.Windows"
         mc:Ignorable="d"
-        Title="ContactPersonListView" Height="450" Width="800">
+        Title="Контактные лица" Height="450" Width="800">
     <Grid>
-        <DataGrid IsReadOnly="True" MaxWidth="800" Width="700" Height="200" HorizontalAlignment="Left" AutoGenerateColumns="False"  x:Name="MainGrid" MouseDoubleClick="MainGrid_MouseDoubleClick" Margin="0,0,0,234">
+        <DataGrid IsReadOnly="True" MaxWidth="800" Width="482" HorizontalAlignment="Left" AutoGenerateColumns="False"  x:Name="MainGrid" MouseDoubleClick="MainGrid_MouseDoubleClick" Margin="174,10,0,13" Background="#FFD4ABF0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Порядковй номер"  
                              Binding="{Binding Id}"></DataGridTextColumn>
@@ -21,7 +21,8 @@
                              Binding="{Binding Sex}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="button_add" Content="Добавить" HorizontalAlignment="Left" Margin="718,10,0,0" VerticalAlignment="Top" Height="49" Width="72" Click="button_add_Click"/>
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="718,100,0,0" VerticalAlignment="Top" Height="49" Width="72" RenderTransformOrigin="0.689,1.666" Click="Button_Click"/>
+        <Button x:Name="button_add" Content="Добавить" HorizontalAlignment="Left" Margin="656,76,0,0" VerticalAlignment="Top" Height="49" Width="72" Click="button_add_Click" Background="#FF976BB5"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="656,125,0,0" VerticalAlignment="Top" Height="49" Width="72" RenderTransformOrigin="0.689,1.666" Click="Button_Click" Background="#FF976BB5"/>
+        <Button x:Name="buttonSelect" Content="Выбрать" HorizontalAlignment="Left" Margin="656,197,0,0" VerticalAlignment="Top" Height="49" Width="72" Click="buttonSelect_Click"/>
     </Grid>
 </Window>

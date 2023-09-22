@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Курсовая.Windows"
         mc:Ignorable="d"
         Title="ProductView" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF896AB5">
+        <Rectangle HorizontalAlignment="Left" Height="129" Margin="345,268,0,0" Stroke="Black" VerticalAlignment="Top" Width="424" Fill="#FF341B44"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="280" Margin="28,36,0,0" Stroke="Black" VerticalAlignment="Top" Width="699" Fill="#FFB492D9"/>
+
         <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Margin="132,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="textBoxProductName" HorizontalAlignment="Left" Margin="132,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxCategory" HorizontalAlignment="Left" Margin="132,151,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
@@ -15,8 +19,8 @@
         <Label Content="Product Name" HorizontalAlignment="Left" Margin="132,72,0,0" VerticalAlignment="Top"/>
         <Label Content="Category" HorizontalAlignment="Left" Margin="132,125,0,0" VerticalAlignment="Top"/>
         <Label Content="Description" HorizontalAlignment="Left" Margin="132,174,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="272,23,0,0" VerticalAlignment="Top" Height="48" Width="93" Click="buttonSave_Click"/>
-        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="400,23,0,0" VerticalAlignment="Top" Height="48" Width="89" Click="buttonCancel_Click"/>
+        <Button x:Name="buttonSave" Content="Save" HorizontalAlignment="Left" Margin="284,128,0,0" VerticalAlignment="Top" Height="48" Width="94" Click="buttonSave_Click" Background="#FF341B44"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="284,56,0,0" VerticalAlignment="Top" Height="48" Width="89" Click="buttonCancel_Click" Background="#FF341B44"/>
 
     </Grid>
 </Window>

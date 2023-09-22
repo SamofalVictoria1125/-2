@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая.Models
 {
-    public partial class Product
+    public class Product
     {
         /*public Product()
         {

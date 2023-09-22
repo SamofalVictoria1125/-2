@@ -12,11 +12,14 @@
     <None Remove="1612161161_192-p-fon-fioletovie-volni-248.jpg" />
     <None Remove="1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
     <None Remove="1644752561_46-krot-info-p-fioletovie-foni-47.jpg" />
+    <None Remove="20161012b.jpg" />
     <None Remove="logo.png" />
     <None Remove="maxresdefault %281%29.jpg" />
+    <None Remove="teacher-clipart-transparent-background-7.png" />
     <None Remove="Windows\1595710463_12-p-sine-fioletovie-foni-13.jpg" />
     <None Remove="Windows\1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
     <None Remove="лого.png" />
+    <None Remove="овощебза.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +31,8 @@
     <Content Include="logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="20161012b.jpg" />
+    <Resource Include="teacher-clipart-transparent-background-7.png" />
     <Resource Include="лого.png" />
   </ItemGroup>
 
@@ -39,6 +44,7 @@
     <Resource Include="maxresdefault (1).jpg" />
     <Resource Include="Windows\1595710463_12-p-sine-fioletovie-foni-13.jpg" />
     <Resource Include="Windows\1612257522_13-p-pastelnii-fon-fioletovii-17.jpg" />
+    <Resource Include="овощебза.png" />
   </ItemGroup>
 
 </Project>

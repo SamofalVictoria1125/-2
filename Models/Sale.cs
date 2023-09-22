@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Курсовая.Controllers;
 
 namespace Курсовая.Models
 {
@@ -12,5 +13,13 @@ namespace Курсовая.Models
         public DateTime DateCalculation { get; set; }
         public int Idmanager { get; set; }
         public int IdcurrencyCalculation { get; set; }
+
+        public Task<Employee> employee
+        {
+            get
+            {
+                return MyHTTPClient.GetManagerById(Idmanager);
+            }
+        }
     }
 }

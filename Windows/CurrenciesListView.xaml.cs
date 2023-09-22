@@ -17,19 +17,26 @@ using Курсовая.Models;
 namespace Курсовая.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для EmployeeListView.xaml
+    /// Логика взаимодействия для CurrenciesListView.xaml
     /// </summary>
-    public partial class EmployeeListView : Window
+    public partial class CurrenciesListView : Window
     {
-        private void button_add_Click(object sender, RoutedEventArgs e)
+        private List<Currency> currencies;
+        public CurrenciesListView()
         {
+            InitializeComponent();
+        }
+
+        public async Task UpdateGrid()
+        {
+            IEnumerable<Currency> list = await MyHTTPClient.GetAllCurrencies();
+            MainGrid.ItemsSource = list;
 
         }
 
-        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        private async void MainGrid_Initialized(object sender, EventArgs e)
         {
-
+            await UpdateGrid();
         }
-
     }
 }

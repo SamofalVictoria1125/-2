@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Курсовая.Controllers;
 using Курсовая.Models;
 using Курсовая.Tools;
 
@@ -25,7 +26,7 @@ namespace Курсовая
         {
             InitializeComponent();
         }
-        private async void Log(object sender, RoutedEventArgs e)
+        public async void Log(object sender, RoutedEventArgs e)
         {
             string login = txt_Login.Text;
             string password = txt_Password.Text;
@@ -44,12 +45,14 @@ namespace Курсовая
                 }
                 if (isLogin)
                 {
-                    if (isEditUser)
 
-                        MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                     MainWindow main = new MainWindow();
+                    MyHTTPClient.Login = txt_Login.Text;
+                    MyHTTPClient.Password = txt_Password.Text;
                     Close();
                     main.Show();
+
                 }
                 else
                 {
@@ -64,6 +67,7 @@ namespace Курсовая
             this.Close();
 
         }
+
     }
 }
 

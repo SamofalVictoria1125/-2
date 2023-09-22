@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,10 +26,18 @@ namespace Курсовая.Windows
 
 
 
-        public CounterpartyListView()
+        public CounterpartyListView(string openMode)
         {
             InitializeComponent();
             UpdateGrid();
+            if (openMode == "Выбор")
+            {
+                ButtonSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ButtonSelect.Visibility = Visibility.Collapsed;
+            }
 
         }
 
@@ -71,6 +80,9 @@ namespace Курсовая.Windows
 
         }
 
-       
+        private void ButtonSelect_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+        }
     }
 }

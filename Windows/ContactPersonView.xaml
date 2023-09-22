@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Курсовая.Windows"
         mc:Ignorable="d"
-        Title="ContactPersonView" Height="450" Width="800">
+        Title="Создание контактного лица" Height="450" Width="800">
     <Grid Background="#FF9441DF">
         <Rectangle HorizontalAlignment="Left" Height="395" Margin="29,29,0,0" VerticalAlignment="Top" Width="305" Fill="#FF784BA3"/>
 

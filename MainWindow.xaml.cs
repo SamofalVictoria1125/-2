@@ -28,7 +28,7 @@ namespace Курсовая
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ContactPersonListView contactPersonList= new ContactPersonListView();
+            ContactPersonListView contactPersonList= new ContactPersonListView("Открыто из главного меню");
             contactPersonList.ShowDialog();
         }
 
@@ -40,7 +40,7 @@ namespace Курсовая
 
         private void Button_Counterparty(object sender, RoutedEventArgs e)
         {
-            CounterpartyListView counterpartylistView = new CounterpartyListView();
+            CounterpartyListView counterpartylistView = new CounterpartyListView("Открыто из главного меню");
             counterpartylistView.ShowDialog();
         }
 
@@ -55,14 +55,28 @@ namespace Курсовая
 
         }
 
-        private void buttonEmployee_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Purchase(object sender, RoutedEventArgs e)
+        {
+            PurchaseListView purchaseListView = new PurchaseListView();
+            purchaseListView.ShowDialog();
+        }
+
+        private void buttonSupply_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Button_Purchase(object sender, RoutedEventArgs e)
+        private void buttonEmployee_Click(object sender, RoutedEventArgs e)
         {
+            EmployeeListView2 employeeListView2= new EmployeeListView2();
+            employeeListView2.ShowDialog();
+        }
 
+        private void buttonCurrency_Click(object sender, RoutedEventArgs e)
+        {
+            CurrenciesListView list = new CurrenciesListView();
+            list.ShowDialog();
         }
     }
 }

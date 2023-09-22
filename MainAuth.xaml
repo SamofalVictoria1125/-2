@@ -8,13 +8,18 @@
         Title="Авторизация" Height="450" Width="800"  Icon="/logo.png">
     <Grid>
         <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/1644752561_46-krot-info-p-fioletovie-foni-47.jpg"/>
+            </Grid.Background>
 
-            <Button Click="Log" Content="Войти" HorizontalAlignment="Left" Margin="86,313,0,0" VerticalAlignment="Top" Width="242" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White"/>
-            <TextBox Name="txt_Login" HorizontalAlignment="Left" Margin="122,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
-            <TextBlock HorizontalAlignment="Left" Margin="18,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Логин"/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="18,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
-            <TextBox Name="txt_Password"  HorizontalAlignment="Left" Margin="121,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Height="32" Background="#FF9E9E9E" BorderBrush="White" Foreground="White" FontSize="24"/>
-            <Button Click="Reg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="86,364,0,0" VerticalAlignment="Top" Width="242" FontSize="24" Foreground="White" Background="#FF9E9E9E" BorderBrush="White"/>
+            <Rectangle HorizontalAlignment="Left" Height="395" Margin="429,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="336" Fill="White"/>
+
+            <Button Click="Log" Content="Войти" HorizontalAlignment="Left" Margin="545,273,0,0" VerticalAlignment="Top" Width="117" FontSize="24" Foreground="White" Background="#FF8E66D1" BorderBrush="#FF8E66D1" Height="33" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="txt_Login" HorizontalAlignment="Left" Margin="479,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="256" Height="25" Background="#FFD4ABF0" BorderBrush="#FF8E66D1" Foreground="White" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="584,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Light"><Run Language="ru-ru" Text="Логин"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="578,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Light"><Run Language="ru-ru" Text="Пароль"/></TextBlock>
+            <TextBox x:Name="txt_Password"  HorizontalAlignment="Left" Margin="480,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="24" Background="#FFD4ABF0" BorderBrush="#FF8E66D1" Foreground="White" FontSize="24"/>
+            <Button Click="Reg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="487,329,0,0" VerticalAlignment="Top" Width="242" FontSize="24" Foreground="White" Background="#FF8E66D1" BorderBrush="White" FontFamily="Segoe UI Light"/>
 
         </Grid>
     </Grid>

@@ -19,6 +19,6 @@ namespace Курсовая.Models
         public string Patronymic { get; set; } = null!;
         public string Sex { get; set; } = null!;
 
-        //public virtual ICollection<Counterparty> Counterparties { get; set; }
+        public virtual ICollection<Counterparty> Counterparties { get; set; }
     }
 }

@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Курсовая"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Овощебаза" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/1644752561_46-krot-info-p-fioletovie-foni-47.jpg"/>
         </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Margin="160,103,0,101" Stroke="Black" Width="541" Fill="#FFAB6BF0"/>
+
         <Rectangle HorizontalAlignment="Left" Height="103" Margin="105,0,0,0" VerticalAlignment="Top" Width="695" Fill="White"/>
 
         <Rectangle HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="160" Fill="#FFC79FF3"/>
@@ -20,8 +22,27 @@
         <Button x:Name="buttonCounterparty" Foreground="DarkViolet" Content="Контрагенты" HorizontalAlignment="Left" Margin="0,154,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_Counterparty" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
         <Button x:Name="buttonCustomer" Content="Заказчики" HorizontalAlignment="Left" Margin="0,181,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonCustomer_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
         <Button x:Name="buttonDeliveryC" Foreground="DarkViolet" Content="Состав отгрузок" HorizontalAlignment="Left" Margin="0,205,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_DeliveryCompositions" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
-        <Button x:Name="buttonEmployee" Content="Сотрудники" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonEmployee_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
+        <Button x:Name="buttonEmployee" Content="Сотрудники" HorizontalAlignment="Left" Margin="0,232,0,0" VerticalAlignment="Top" Height="24" Width="160" Background="#FFC79FF3" BorderBrush="#FFC79FF3" Click="buttonEmployee_Click"/>
         <Button x:Name="buttonPurchase" Foreground="DarkViolet" Content="Покупки" HorizontalAlignment="Left" Margin="0,256,0,0" VerticalAlignment="Top" Height="27" Width="160" Click="Button_Purchase" Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium"/>
+        <Button x:Name="buttonEmployee_Copy" Content="Поставки" HorizontalAlignment="Left" Margin="0,283,0,0" VerticalAlignment="Top" Height="24" Width="160" Click="buttonSupply_Click" Background="#FFC79FF3" BorderBrush="#FFC79FF3"/>
+        <Image Margin="590,193,0,0" Source="/teacher-clipart-transparent-background-7.png" Stretch="Fill" HorizontalAlignment="Left" Width="178" Height="206" VerticalAlignment="Top"/>
+        <Label Content="Плодоовощная база — место для длительного хранения овощей&#xD;&#xA;и фруктов вблизи и внутри крупных городов. &#xD;&#xA;В отличие от мелкооптовых складов торговых сетей, характерных для рыночной экономики, &#xD;&#xA;плодоовощные базы были частью государственной системы снабжения&#xD;&#xA;населения продовольствием в условиях планового хозяйства." HorizontalAlignment="Left" Height="89" Margin="199,123,0,0" VerticalAlignment="Top" Width="495" FontFamily="Segoe UI Light" BorderBrush="White" Foreground="White">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+        <Label Content="Не упусти уникальную возможность стать индивидуальным &#xD;&#xA;партнером нашей овощебазы,чтобы связаться с сотрудниками&#xD;&#xA;нужно перейти по ссылке и оставить контактный номер." HorizontalAlignment="Left" Height="63" Margin="248,233,0,0" VerticalAlignment="Top" Width="397" FontFamily="Segoe UI Light" Foreground="White"/>
+        <Label Content="ПЕРЕЙТИ ПО ССЫЛКЕ..." HorizontalAlignment="Left" Height="38" Margin="362,295,0,0" VerticalAlignment="Top" Width="138" FontFamily="Segoe UI Light" FontWeight="Heavy"/>
+        <Label Content="С 1 МАЯ по 20 ИЮНЯ действует новая акция!" HorizontalAlignment="Left" Height="33" Margin="219,366,0,0" VerticalAlignment="Top" Width="426" FontFamily="Segoe UI Light" FontSize="20" FontWeight="Bold" Foreground="White"/>
+        <Image Margin="165,0,533,331" Source="/20161012b.jpg" Stretch="Fill"/>
+        <Label Content="X" HorizontalAlignment="Left" Height="25" Margin="779,0,0,0" VerticalAlignment="Top" Width="21" Background="Black" Foreground="White"/>
+        <Label Content="Как решить задачу любой сложности?&#xD;&#xA;Просто перейдите по ССЫЛКЕ..." HorizontalAlignment="Left" Height="53" Margin="272,26,0,0" VerticalAlignment="Top" Width="388" Background="White" FontFamily="Segoe UI Light" OpacityMask="#FF181350" BorderBrush="White">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Button x:Name="buttonCurrency" Foreground="DarkViolet" Content="Валюта" HorizontalAlignment="Left" Margin="0,306,0,0" VerticalAlignment="Top" Height="27" Width="160"  Background="#FFC79FF3" BorderBrush="#FFC79FF3" FontFamily="Dubai Medium" Click="buttonCurrency_Click"/>
+
 
     </Grid>
 </Window>
